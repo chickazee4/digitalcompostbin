@@ -44,9 +44,7 @@ namespace digitalcompostbin
                         current[i] = !current[i];
                     }
                     byte[] result = new byte[current.Count / 8];
-                    byte[] orig = new byte[current_orig.Count / 8];
                     current.CopyTo(result, 0);
-                    current_orig.CopyTo(orig, 0);
                     File.WriteAllBytes(f.FullName, result);
                 }
             }
